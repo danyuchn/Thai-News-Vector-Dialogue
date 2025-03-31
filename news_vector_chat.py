@@ -56,7 +56,7 @@ rss_urls = [
     "https://www.khaosod.co.th/feed",
     "https://www.prachachat.net/feed",
     "https://workpointtoday.com/feed/"
-]
+] #Put your selected RSS feeds above
 
 all_news = []
 for url in rss_urls:
@@ -135,7 +135,7 @@ while True:
         )
     else:
         response = client.responses.create(
-            model="gpt-4o-mini",
+            model="gpt-4o-mini", #You can select the model you need
             previous_response_id=previous_response_id,
             input=[{"role": "user", "content": user_input}],
             tools=[{
